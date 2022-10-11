@@ -1,15 +1,17 @@
 
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Homepage from './Pages/Homepage';
 import Productpage from './Pages/Productpage';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import {LinkContainer} from 'react-router-bootstrap'
+import './App.css';
 
 
 
 function App() {
   return (
+    <div className='App'>
     <BrowserRouter>
     <div className='site-container d-flex flex-column'>
       <header>
@@ -37,6 +39,7 @@ function App() {
       </footer>
     </div>
     </BrowserRouter>
+    </div>
   );
 }
 

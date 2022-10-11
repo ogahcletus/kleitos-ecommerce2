@@ -26,16 +26,7 @@ header a {
   font-family: 'Trebuchet MS';
 
 }
- */
 
- .site-container{
-  min-height: 100vh;
- }
-
-
-main{
- flex: 1;
-}
 
 .products{
   display: flex;
@@ -62,3 +53,28 @@ main{
   padding: 5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+ 
+
+*/
+
+main{
+ flex: 1;
+}
+
+.btn-primary{
+  background-color: darkblue;
+  
+
+}
+
+ .site-container{
+  min-height: 100vh;
+ }
+
+ .rating span{
+  color: gold;
+ }
+
+ .review span{
+  color: black;
+ }

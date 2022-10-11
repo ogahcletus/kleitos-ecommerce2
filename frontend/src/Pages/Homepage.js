@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
 //import data from '../data';
 import axios from 'axios';
 //import { useState } from 'react';
 import logger from 'use-reducer-logger';
 import { useReducer, useEffect } from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Products from '../Components/Products';
 
 
 const reducer = ( state, action) => {
@@ -61,22 +63,17 @@ function Homepage() {
         ) : error? (
             <div>{error}</div>
         ) : (
-          products.map((product) => (
-            <div className='product' key={product.slug}>
-            <Link to={`/product/${product.slug}`}>
-            <img  src={product.image}  alt={product.name} className='product-image'/>
-            </Link>
-            <div  className='product-info'>
-            <Link to={`/product/${product.slug}`}>
-            <p>{product.name}</p>
-            </Link>
-            <p><strong>N{product.price}</strong></p>
-            <button>Add to Cart</button>
+          <Row>
           
-            </div>
-          </div>
-
+         { products.map((product) => (
+          <Col key={product.slug} sm={6}  md={4}  lg={2} className='mb-3'>
+          <Products product={product}></Products>
+            
+          </Col>
           ))
+
+         }
+          </Row>
         )}
         </div>
      
